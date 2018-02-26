@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A demo Rails API for storing h1,h2,h3 elements contents from an URL.
 
-Things you may want to cover:
+Example Usage for Posting an URL:
+```
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"scrape_url":{"url":"http://mathiuraup.com"}}'  http://localhost:3000/api/v1/scrape_urls
+```
 
-* Ruby version
+Example Usage for list of URL details:
+```
+curl -H "Accept: application/json" -H "Content-type: application/json" -X GET http://localhost:3000/api/v1/scrape_urls
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
