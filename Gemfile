@@ -60,3 +60,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rack-cors'
 gem 'active_model_serializers', '~> 0.10.0', require: true
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'

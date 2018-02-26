@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226155818) do
+ActiveRecord::Schema.define(version: 20180226180708) do
+
+  create_table "scrape_url_contents", force: :cascade do |t|
+    t.integer "scrape_url_id"
+    t.string "element_type"
+    t.string "element_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scrape_url_id"], name: "index_scrape_url_contents_on_scrape_url_id"
+  end
 
   create_table "scrape_urls", force: :cascade do |t|
     t.string "url"
-    t.string "h1_content"
-    t.string "h2_content"
-    t.string "h3_content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
